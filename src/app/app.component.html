@@ -4,7 +4,7 @@
     <div class="row">
         <div class="form-group col">
             <label>Payee Name</label>
-            <input class="form-control" (input)="onNameChange($event)" />
+            <input class="form-control" (input)="onNameChange($event)" autofocus>
         </div>
 
         <div class="col">
@@ -14,5 +14,32 @@
             </div>
         </div>
     </div>
-    
+
+    <div class="row">
+        <div class="form-group col">
+            <label>Payment Date</label>
+            <input class="form-control" type="date" (input)="onDateChange($event)">
+        </div>
+
+        <div class="col">
+            <label><b>Payment Date</b></label>
+            <div>
+                {{ date | date : "MMMM d, YYYY" }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label>Payment Date</label>
+            <input class="form-control" type="number" (input)="onAmountChange($event)">
+        </div>
+
+        <div class="col">
+            <label><b>Payment Amount</b></label>
+            <div>
+                {{ amount | currency }}
+            </div>
+        </div>
+    </div>
 </div>
