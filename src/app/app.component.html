@@ -56,4 +56,18 @@
             </div>
         </div>
     </div>
+
+    <div class="row mb-3">
+        <div class="form-group col">
+            <label>Miles</label>
+            <input class="form-control" (input)="onMilesChange($event)">
+        </div>
+
+        <div class="col">
+            <label><b>Kilometers</b></label>
+            <div>
+                {{ miles | convert : 'cm' }}
+            </div>
+        </div>
+    </div>
 </div>
