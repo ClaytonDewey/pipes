@@ -9,6 +9,12 @@ export class AppComponent {
     name: string;
     date: string;
     amount: number;
+    height: number;
+
+    onHeightChange(event: Event) {
+        const target = event.target as HTMLInputElement;
+        this.height = parseFloat(target.value);
+    }
 
     onNameChange(event: Event) {
         const target = event.target as HTMLInputElement;
